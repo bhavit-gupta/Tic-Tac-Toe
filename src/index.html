@@ -6,54 +6,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic-Tac-Toe</title>
     <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
-<body class="bg-gradient-to-br from-[#548687] to-[#2f4f4f] min-h-screen flex items-center justify-center text-center">
+<body class="bg-gradient-to-br from-[#548687] to-[#2f4f4f] min-h-screen flex flex-col text-center">
 
-    <!-- Winner Message -->
-    <div id="winnerMsg"
-        class="hidden absolute inset-0 bg-black/60 flex items-center justify-center z-10">
-        <div class="bg-white rounded-2xl p-8 w-80 shadow-2xl">
-            <h1 id="msg" class="text-2xl font-bold text-gray-800 mb-4"></h1>
-            <button id="newGameBtn"
-                class="w-full bg-emerald-500 hover:bg-emerald-600 text-white py-2 rounded-lg transition">
-                New Game
-            </button>
-        </div>
-    </div>
+    <!-- Game Area (fills remaining space, centers content) -->
+    <div class="flex-1 flex items-center justify-center relative">
 
-    <!-- Main Card -->
-    <main id="main"
-        class="bg-white rounded-3xl shadow-2xl p-8 w-96">
-
-        <h1 class="text-3xl font-bold text-gray-800 mb-6">
-            Tic-Tac-Toe
-        </h1>
-
-        <!-- Game Grid -->
-        <div class="flex justify-center mb-6">
-            <div id="game" class="grid grid-cols-3 gap-3">
-                <button class="box h-24 w-24 rounded-xl bg-[#ffffc7] text-3xl font-bold text-indigo-600 hover:bg-[#e9e998] active:scale-95 transition"></button>
-                <button class="box h-24 w-24 rounded-xl bg-[#ffffc7] text-3xl font-bold text-indigo-600 hover:bg-[#e9e998] active:scale-95 transition"></button>
-                <button class="box h-24 w-24 rounded-xl bg-[#ffffc7] text-3xl font-bold text-indigo-600 hover:bg-[#e9e998] active:scale-95 transition"></button>
-                <button class="box h-24 w-24 rounded-xl bg-[#ffffc7] text-3xl font-bold text-indigo-600 hover:bg-[#e9e998] active:scale-95 transition"></button>
-                <button class="box h-24 w-24 rounded-xl bg-[#ffffc7] text-3xl font-bold text-indigo-600 hover:bg-[#e9e998] active:scale-95 transition"></button>
-                <button class="box h-24 w-24 rounded-xl bg-[#ffffc7] text-3xl font-bold text-indigo-600 hover:bg-[#e9e998] active:scale-95 transition"></button>
-                <button class="box h-24 w-24 rounded-xl bg-[#ffffc7] text-3xl font-bold text-indigo-600 hover:bg-[#e9e998] active:scale-95 transition"></button>
-                <button class="box h-24 w-24 rounded-xl bg-[#ffffc7] text-3xl font-bold text-indigo-600 hover:bg-[#e9e998] active:scale-95 transition"></button>
-                <button class="box h-24 w-24 rounded-xl bg-[#ffffc7] text-3xl font-bold text-indigo-600 hover:bg-[#e9e998] active:scale-95 transition"></button>
+        <!-- Winner Message -->
+        <div id="winnerMsg" class="hidden absolute inset-0 bg-black/60 flex items-center justify-center z-10">
+            <div class="bg-white rounded-2xl p-8 w-80 shadow-2xl">
+                <h1 id="msg" class="text-2xl font-bold text-gray-800 mb-4"></h1>
+                <button id="newGameBtn"
+                    class="w-full bg-emerald-500 hover:bg-emerald-600 text-white py-2 rounded-lg transition">
+                    New Game
+                </button>
             </div>
         </div>
 
-        <!-- Reset Button -->
-        <button id="resetBtn"
-            class="w-full bg-gray-800 hover:bg-gray-900 text-white py-3 rounded-xl text-lg transition">
-            Reset Game
-        </button>
-    </main>
+        <!-- Main Card -->
+        <main id="main" class="bg-white rounded-3xl shadow-2xl p-8 w-96">
+
+            <h1 class="text-3xl font-bold text-gray-800 mb-6">
+                Tic-Tac-Toe
+            </h1>
+
+            <!-- Game Grid -->
+            <div class="flex justify-center mb-6">
+                <div id="game" class="grid grid-cols-3 gap-3">
+                    <button
+                        class="box h-24 w-24 rounded-xl bg-[#ffffc7] text-3xl font-bold text-indigo-600 hover:bg-[#e9e998] active:scale-95 transition"></button>
+                    <button
+                        class="box h-24 w-24 rounded-xl bg-[#ffffc7] text-3xl font-bold text-indigo-600 hover:bg-[#e9e998] active:scale-95 transition"></button>
+                    <button
+                        class="box h-24 w-24 rounded-xl bg-[#ffffc7] text-3xl font-bold text-indigo-600 hover:bg-[#e9e998] active:scale-95 transition"></button>
+                    <button
+                        class="box h-24 w-24 rounded-xl bg-[#ffffc7] text-3xl font-bold text-indigo-600 hover:bg-[#e9e998] active:scale-95 transition"></button>
+                    <button
+                        class="box h-24 w-24 rounded-xl bg-[#ffffc7] text-3xl font-bold text-indigo-600 hover:bg-[#e9e998] active:scale-95 transition"></button>
+                    <button
+                        class="box h-24 w-24 rounded-xl bg-[#ffffc7] text-3xl font-bold text-indigo-600 hover:bg-[#e9e998] active:scale-95 transition"></button>
+                    <button
+                        class="box h-24 w-24 rounded-xl bg-[#ffffc7] text-3xl font-bold text-indigo-600 hover:bg-[#e9e998] active:scale-95 transition"></button>
+                    <button
+                        class="box h-24 w-24 rounded-xl bg-[#ffffc7] text-3xl font-bold text-indigo-600 hover:bg-[#e9e998] active:scale-95 transition"></button>
+                    <button
+                        class="box h-24 w-24 rounded-xl bg-[#ffffc7] text-3xl font-bold text-indigo-600 hover:bg-[#e9e998] active:scale-95 transition"></button>
+                </div>
+            </div>
+
+            <!-- Reset Button -->
+            <button id="resetBtn"
+                class="w-full bg-gray-800 hover:bg-gray-900 text-white py-3 rounded-xl text-lg transition">
+                Reset Game
+            </button>
+        </main>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="w-full flex items-center justify-between px-6 py-3 bg-black/25 text-white/80 text-sm">
+        <span>Designed and Created by
+            <a href="https://bhavitgupta.onrender.com/" target="_blank" rel="noopener noreferrer"
+                class="font-semibold text-white hover:text-emerald-300 transition">
+                Bhavit Gupta
+            </a>
+        </span>
+        <a href="https://github.com/bhavit-gupta" target="_blank" rel="noopener noreferrer"
+            class="text-white/80 hover:text-emerald-300 transition text-xl" aria-label="GitHub Profile">
+            <i class="fa-brands fa-github"></i>
+        </a>
+    </footer>
 
     <script src="script.js"></script>
 </body>
-
 
 </html>
